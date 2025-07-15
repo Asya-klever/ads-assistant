@@ -5,10 +5,12 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Копируем файлы проекта
-COPY . .
+COPY . /app
+
+ENV PYTHONPATH=/app
 
 # Устанавливаем зависимости
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Запускаем бота
-CMD ["python", "app/main.py"]
+CMD ["python", "app/main.py"] 
