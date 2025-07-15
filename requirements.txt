@@ -1,1 +1,3 @@
-# requirements.txt - placeholder
+openai
+requests
+python-dotenv
